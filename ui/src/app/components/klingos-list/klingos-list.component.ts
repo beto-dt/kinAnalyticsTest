@@ -19,4 +19,8 @@ export class KlingosListComponent implements OnInit {
     })
   }
 
+  deleteKlingos(id: any){
+     this.klingosService.deleteklingos(id).subscribe()
+  }
+
 }

@@ -13,7 +13,7 @@
             <th scope="col">inyectorC</th>
             <th scope="col">Capacitad</th>
             <th scope="col">Tiempo de Funcionamiento</th>
-
+            <th scope="col">Opciones</th>
           </tr>
         </thead>
         <tbody *ngFor="let klingo of klingos">
@@ -23,6 +23,7 @@
             <td>{{klingo.inyectorC}}%</td>
             <td>{{klingo.capacidadPA}},{{klingo.capacidadPB}},{{klingo.capacidadPC}}</td>
             <td>{{klingo.tiempoFuncionamiento}} </td>
+            <td><button (click)="deleteKlingos(klingo._id)">Eliminar</button></td>
           </tr>
         </tbody>
       </table>

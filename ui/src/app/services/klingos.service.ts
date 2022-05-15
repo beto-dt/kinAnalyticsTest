@@ -23,4 +23,8 @@ export class KlingosService {
     getklingos() {
       return this.http.get<any>('http://localhost:3000/api/klingons', httpOptions);
     }
+
+    deleteklingos( id : any) {
+      return this.http.delete<any>('http://localhost:3000/api/klingons/'+id, httpOptions);
+    }
 }
