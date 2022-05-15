@@ -5,26 +5,52 @@
 </nav>
 <div class="container container-klingos">
   <h1>Enterprise’ warp-drive</h1>
-  <br>
-  <form [formGroup]="klingosForm" (ngSubmit)="enviar(klingosForm.value)">
-  <div class="mb-3">
-    <label for="inyectorA" class="form-label">Inyector A</label>
-    <input formControlName="inyectorA" type="number" class="form-control" id="inyectorA" placeholder="Inyector A">
-  </div>
-  <div class="mb-3">
-    <label for="inyectorB" class="form-label">Inyector B</label>
-    <input formControlName="inyectorB" type="number" class="form-control" id="inyectorB" placeholder="Inyector B">
-  </div>
-  <div class="mb-3">
-    <label for="inyectorC" class="form-label">Inyector C</label>
-    <input formControlName="inyectorC" type="number" class="form-control" id="inyectorC" placeholder="Inyector C">
-  </div>
-  <div class="mb-3">
-    <label for="velocidadMaxima" class="form-label">Velocidad Maxima</label>
-    <input formControlName="velocidadMaxima" type="number" class="form-control" id="velocidadMaxima" placeholder="velocidadMaxima">
-  </div>
-  <div class="d-grid gap-2">
-    <button class="btn btn-primary" type="submit">Calcular Tiempo estimado</button>
-  </div>
-</form>
+  <br />
+  <form [formGroup]="klingosForm" (ngSubmit)="sendKlingos(klingosForm.value)">
+    <div class="mb-3">
+      <label for="inyectorA" class="form-label">Inyector A</label>
+      <input
+        formControlName="inyectorA"
+        type="number"
+        class="form-control"
+        id="inyectorA"
+        placeholder="Inyector A"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inyectorB" class="form-label">Inyector B</label>
+      <input
+        formControlName="inyectorB"
+        type="number"
+        class="form-control"
+        id="inyectorB"
+        placeholder="Inyector B"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inyectorC" class="form-label">Inyector C</label>
+      <input
+        formControlName="inyectorC"
+        type="number"
+        class="form-control"
+        id="inyectorC"
+        placeholder="Inyector C"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="velocidadMaxima" class="form-label">Velocidad Maxima</label>
+      <input
+        formControlName="velocidadMaxima"
+        type="number"
+        class="form-control"
+        id="velocidadMaxima"
+        placeholder="velocidadMaxima"
+      />
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit">
+        Calcular Tiempo estimado
+      </button>
+    </div>
+  </form>
 </div>
