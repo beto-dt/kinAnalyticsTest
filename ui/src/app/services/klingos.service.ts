@@ -19,4 +19,8 @@ export class KlingosService {
     addklingo(klingos: klingos) {
       return this.http.post<klingos>('http://localhost:3000/api/klingons', klingos, httpOptions);
     }
+
+    getklingos() {
+      return this.http.get<any>('http://localhost:3000/api/klingons', httpOptions);
+    }
 }

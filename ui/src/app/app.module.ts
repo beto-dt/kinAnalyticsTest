@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { KlingosComponent } from './components/klingos/klingos.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { KlingosListComponent } from './components/klingos-list/klingos-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    KlingosComponent
+    KlingosComponent,
+    KlingosListComponent
   ],
   imports: [
     BrowserModule,

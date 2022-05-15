@@ -1,0 +1,29 @@
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Enterprise’ warp-drive</span>
+    </div>
+  </nav>
+
+  <div class="container container-klingos">
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">inyectorA</th>
+            <th scope="col">inyectorB</th>
+            <th scope="col">inyectorC</th>
+            <th scope="col">Capacitad</th>
+            <th scope="col">Tiempo de Funcionamiento</th>
+
+          </tr>
+        </thead>
+        <tbody *ngFor="let klingo of klingos">
+          <tr>
+            <td>{{klingo.inyectorA}}%</td>
+            <td>{{klingo.inyectorB}}%</td>
+            <td>{{klingo.inyectorC}}%</td>
+            <td>{{klingo.capacidadPA}},{{klingo.capacidadPB}},{{klingo.capacidadPC}}</td>
+            <td>{{klingo.tiempoFuncionamiento}} </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
