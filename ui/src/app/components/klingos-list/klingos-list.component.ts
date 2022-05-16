@@ -13,11 +13,13 @@ export class KlingosListComponent implements OnInit {
   constructor(private klingosService: KlingosService, private router: Router) {}
 
   ngOnInit(): void {
+    /* Cargar la informacion de la coleccion Klingos */
     this.klingosService.getklingos().subscribe((res) => {
       this.klingos = res.klingons;
     });
   }
 
+  /* Elimina el documento mediante el ID  de la coleccion klingos */
   deleteKlingos(id: any) {
     this.klingosService.deleteklingos(id).subscribe(() => {
       alert('Dato Eliminado');
@@ -25,6 +27,7 @@ export class KlingosListComponent implements OnInit {
     });
   }
 
+  /* Redirrigir a la pagina home */
   goHome() {
     this.router.navigate(['/home']);
   }

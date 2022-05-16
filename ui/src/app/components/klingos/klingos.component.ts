@@ -39,12 +39,14 @@ export class KlingosComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /* Obtener la Velocidad Maxima */
   getVelocidadMaxima() {
     this.PORCENTAJE_VELOCIDAD_MAXIMA =
       ((this.PLASMA_BASE + this.PLASMA_EXTRA) * this.INYECTOR_CANT * 100) /
       this.FLUJO_PLASMA_MAX;
   }
 
+  /* Valida si el porcentaje de la velocidad esta dentro del rango */
   getPorcentajeVelocidad(PORCENTAJE_VELOCIDAD: any) {
     if (
       PORCENTAJE_VELOCIDAD >= 0 &&
@@ -60,16 +62,19 @@ export class KlingosComponent implements OnInit {
       );
   }
 
+  /* Obtener  la capacidad  de plasma por cada INYECTOR(A,B,C) */
   getCapacidadPlasma(INYECTOR_A: any, INYECTOR_B: any, INYECTOR_C: any) {
     this.CAPACIDAD_PLASMA_A = ((100 - INYECTOR_A) * this.PLASMA_BASE) / 100;
     this.CAPACIDAD_PLASMA_B = ((100 - INYECTOR_B) * this.PLASMA_BASE) / 100;
     this.CAPACIDAD_PLASMA_C = ((100 - INYECTOR_C) * this.PLASMA_BASE) / 100;
   }
 
+  /* Redirrigir a la pagina list */
   goKlingos() {
     this.router.navigate(['/list']);
   }
 
+  /* Es para enviar  la inforación  para realizar los calculos  de los inyectores para obtener el tiempo  de funcionar */
   sendKlingos(value: any) {
     this.getVelocidadMaxima();
     this.getPorcentajeVelocidad(value.velocidadMaxima);

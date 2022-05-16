@@ -3,6 +3,7 @@ const app = require("./app");
 require("dotenv").config();
 const port = process.env.PORT;
 
+/* Conexion de la Base de Datos Mongosee */
 mongoose.Promise = global.Promise;
 mongoose
   .connect(process.env.MONGOOSE_CONNECT)

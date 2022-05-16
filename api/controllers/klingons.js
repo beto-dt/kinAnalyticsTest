@@ -1,5 +1,7 @@
 const Klingons = require("../models/klingons");
 
+/* EndPoint para guardar la información */
+/* Método POST */
 function saveKlingons(req, res) {
   const params = req.body;
   const klingons = new Klingons();
@@ -22,6 +24,8 @@ function saveKlingons(req, res) {
   });
 }
 
+/* EndPoint para obtener toda la informacion de la coleccion  klingons */
+/* Método GET */
 function getKlingons(req, res) {
   Klingons.find((err, klingons) => {
     if (err) return res.status(500).send({ message: "error en la peticion" });
@@ -34,6 +38,8 @@ function getKlingons(req, res) {
   });
 }
 
+/* EndPoint para obtener la informacion mediante un ID */
+/* Método GET */
 function getKlingon(req, res) {
   const klingonId = req.params.id;
   Klingons.findById(klingonId, (err, klingon) => {
@@ -46,6 +52,8 @@ function getKlingon(req, res) {
   });
 }
 
+/* EndPoint para actualizar la informacion mediante un ID */
+/* Método PUT */
 function updateKlingon(req, res) {
   const klingonId = req.params.id;
   const update = req.body;
@@ -65,6 +73,8 @@ function updateKlingon(req, res) {
   );
 }
 
+/* EndPoint para Eliminar la informacion mediante un ID */
+/* Método DELETE */
 function deleteKlingon(req, res) {
   const klingonId = req.params.id;
   Klingons.findById(klingonId).remove((err) => {

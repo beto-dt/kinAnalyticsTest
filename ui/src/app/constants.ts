@@ -5,3 +5,7 @@ export const Klingos = {
     FlujoPlasmaMax : 300,
     TiempoFuncionarMax:100
   };
+
+  export const API = {
+     url: "http://localhost:3000/api/"
+  }

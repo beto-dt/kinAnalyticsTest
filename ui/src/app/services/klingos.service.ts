@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { klingos } from '../types';
+import { API } from '../constants';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -16,7 +17,7 @@ export class KlingosService {
 
   addklingo(klingos: klingos) {
     return this.http.post<klingos>(
-      'http://localhost:3000/api/klingons',
+      API.url+'klingons',
       klingos,
       httpOptions
     );
@@ -24,14 +25,14 @@ export class KlingosService {
 
   getklingos() {
     return this.http.get<any>(
-      'http://localhost:3000/api/klingons',
+      API.url+'klingons',
       httpOptions
     );
   }
 
   deleteklingos(id: any) {
     return this.http.delete<any>(
-      'http://localhost:3000/api/klingons/' + id,
+      API.url+'klingons/' + id,
       httpOptions
     );
   }
