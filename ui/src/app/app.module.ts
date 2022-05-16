@@ -22,7 +22,7 @@ import { KlingosListComponent } from './components/klingos-list/klingos-list.com
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

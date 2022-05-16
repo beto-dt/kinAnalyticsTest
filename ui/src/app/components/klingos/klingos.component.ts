@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Klingos } from 'src/app/constants';
 import { KlingosService } from 'src/app/services/klingos.service';
 @Component({
   selector: 'app-klingos',
@@ -9,10 +10,11 @@ import { KlingosService } from 'src/app/services/klingos.service';
 })
 export class KlingosComponent implements OnInit {
   klingosForm: FormGroup;
-  public PLASMA_BASE = 100;
-  public PLASMA_EXTRA = 99;
-  public INYECTOR_CANT = 3;
-  public FLUJO_PLASMA_MAX = 300;
+  public PLASMA_BASE = Klingos.PlasmaBase;
+  public PLASMA_EXTRA = Klingos.PlasmaExtra;
+  public INYECTOR_CANT = Klingos.InyectorCant;
+  public FLUJO_PLASMA_MAX = Klingos.FlujoPlasmaMax;
+  public TIEMPO_FUNCIONAR_MAX = Klingos.TiempoFuncionarMax;
   public PORCENTAJE_VELOCIDAD_MAXIMA = 0;
   public PLASMA_REQUERIDO = 0;
   public CAPACIDAD_PLASMA_A = 0;
@@ -20,7 +22,6 @@ export class KlingosComponent implements OnInit {
   public CAPACIDAD_PLASMA_C = 0;
   public DELTA_CAPACIDAD = 0;
   public FLUJO_POR_INYECTOR = 0;
-  public TIEMPO_FUNCIONAR_MAX = 100;
   public TIEMPO_FUNCIONAR: any;
 
   constructor(
