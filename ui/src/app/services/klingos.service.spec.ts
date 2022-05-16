@@ -4,11 +4,9 @@ import { KlingosService } from './klingos.service';
 
 describe('KlingosService', () => {
   let service: KlingosService;
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-
     });
     service = TestBed.inject(KlingosService);
   });
